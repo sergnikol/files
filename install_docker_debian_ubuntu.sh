@@ -1,7 +1,7 @@
 #https://docs.docker.com/engine/installation/linux/debian/
 ARCH=`dpkg --print-architecture`
 REL=`lsb_release -i | sed 's/\(.*:\|\s\)//g' | tr '[:upper:]' '[:lower:]'`
-apt-get remove docker docker-enginei -y
+apt-get purge docker docker-engine docker-ce -y
 apt-get install \
      apt-transport-https \
      ca-certificates \
