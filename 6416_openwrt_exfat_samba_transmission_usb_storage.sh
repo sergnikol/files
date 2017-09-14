@@ -10,7 +10,7 @@ sed -i -e '1 s/^/mount \/dev\/sda1 \/mnt\/usb\n/;' /etc/rc.local
 
 opkg install samba36-server
 
-echo “config samba
+echo "config samba
 	option name 'OpenWrt'
 	option workgroup 'OpenWrt'
 	option description 'Samba on OpenWrt'
@@ -24,13 +24,13 @@ echo “config samba
 	option guest_ok 'yes'
 	option create_mask '0700'
 	option dir_mask '0700'
-	option read_only ‘no’” > /etc/config/samba
+	option read_only ‘no’" > /etc/config/samba
 
 /etc/init.d/samba enable
 
 
 opkg install transmission-daemon
-echo “config transmission
+echo "config transmission
 	option enabled '1'
 	option config_dir '/tmp/transmission'
 	option alt_speed_down '50'
@@ -93,7 +93,7 @@ echo “config transmission
 	option upload_slots_per_torrent '14'
 	option utp_enabled 'true'
 	option scrape_paused_torrents 'true'
-	option watch_dir_enabled 'false'” > /etc/config/transmission
+	option watch_dir_enabled 'false'" > /etc/config/transmission
 /etc/init.d/transmission enable
 reboot
 
