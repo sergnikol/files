@@ -28,7 +28,7 @@ echo "config samba
 
 /etc/init.d/samba enable
 
-
+opkg install libpolarssl
 opkg install transmission-daemon
 echo "config transmission
 	option enabled '1'
