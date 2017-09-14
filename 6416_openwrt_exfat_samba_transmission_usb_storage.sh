@@ -30,6 +30,7 @@ echo "config samba
 
 opkg install libpolarssl
 opkg install transmission-daemon
+opkg install transmission-web
 echo "config transmission
 	option enabled '1'
 	option config_dir '/tmp/transmission'
